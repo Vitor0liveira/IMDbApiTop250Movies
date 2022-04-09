@@ -1,4 +1,4 @@
-package com.jv.topmovies.IMDbTopMovies.http;
+package com.jv.topmovies.IMDbTopMovies.remote;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jv.topmovies.IMDbTopMovies.exception.MovieException;
@@ -11,12 +11,12 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 @Component
-public class HttpClientWrapper {
+public class ImdbClient {
 
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
 
-    public HttpClientWrapper(HttpClient httpClient, ObjectMapper objectMapper) {
+    public ImdbClient(HttpClient httpClient, ObjectMapper objectMapper) {
         this.httpClient = httpClient;
         this.objectMapper = objectMapper;
     }

@@ -1,4 +1,4 @@
-package com.jv.topmovies.IMDbTopMovies.http;
+package com.jv.topmovies.IMDbTopMovies.remote;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
