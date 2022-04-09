@@ -6,7 +6,7 @@ import lombok.Data;
 public class Movie {
 
     private String fullTitle;
-    private String urlImage;
-    private Integer rating;
-    private Integer year;
+    private String image;
+    private Float imDbRating;
+    private String year;
 }

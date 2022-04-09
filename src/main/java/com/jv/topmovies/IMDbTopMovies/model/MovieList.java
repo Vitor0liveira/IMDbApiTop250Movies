@@ -2,9 +2,10 @@ package com.jv.topmovies.IMDbTopMovies.model;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class MovieList {
 
-    private Movie movies;
-
+    private List<Movie> items;
 }

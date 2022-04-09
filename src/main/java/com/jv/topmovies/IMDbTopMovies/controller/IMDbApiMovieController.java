@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @RestController
 @RequestMapping("/api")
 public class IMDbApiMovieController {
@@ -20,11 +17,8 @@ public class IMDbApiMovieController {
         this.movieService = movieService;
     }
 
-        @GetMapping("/movies")
-        public ResponseEntity<List<MovieList>> allMovies() {
-            return ResponseEntity.ok().body(List.of()
-                    .stream()
-                    .map(movie -> movieService.get())
-                    .collect(Collectors.toList()));
-        }
+    @GetMapping("/movies")
+    public ResponseEntity<MovieList> allMovies() {
+        return ResponseEntity.ok().body(movieService.get());
+    }
 }
