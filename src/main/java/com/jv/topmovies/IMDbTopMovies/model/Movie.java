@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class Movie {
 
+    private String id;
     private String fullTitle;
     private String image;
     private Float imDbRating;
